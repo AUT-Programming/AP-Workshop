@@ -17,8 +17,7 @@ Workshop course for Advanced Programming at AUT-CE
     - Working with Git and GitHub.
       
 2. **Java Basics and OOP**
-    - Introduction to Java and JDK.
-    - Basic syntax, control flow, classes and objects.
+    - Classes and Objects.
     - Constructors, getters, setters, and encapsulation.
     - Class Diagram.
 
