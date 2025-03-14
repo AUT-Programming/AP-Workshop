@@ -23,7 +23,7 @@ Workshop course for Advanced Programming at AUT-CE
 
 3. **Object Composition, Strings, Javadoc**
     - Object composition (has-a relationships).
-    - String manipulation, common methods and enums.
+    - String manipulation and common methods.
     - Writing and generating Javadoc comments for code documentation, built-in packages.
 
 4. **Collections**
