@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.apworkshop12.apworkshop12schedule.Controller"
+            prefWidth="400" prefHeight="250">
+
+    <children>
+        <VBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+            <Label fx:id="label" text="Press the button to start..." wrapText="true"/>
+            <Button text="Start Animation" onAction="#startAnimation"/>
+        </VBox>
+    </children>
+</AnchorPane>

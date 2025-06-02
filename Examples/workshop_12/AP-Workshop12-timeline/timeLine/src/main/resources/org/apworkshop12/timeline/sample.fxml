@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      spacing="10" alignment="CENTER" prefWidth="300" prefHeight="200">
+    <Label fx:id="label" text="Press Start"/>
+    <Button text="Start" onAction="#start"/>
+</VBox>

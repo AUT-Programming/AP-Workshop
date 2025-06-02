@@ -1,0 +1,57 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #6a3093, #a044ff);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 0, 2);
+    -fx-background-radius: 10;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #7b3b9c, #b559ff);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #59267a, #7640c8);
+    -fx-effect: none;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.grid-pane .button {
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 24px;
+    -fx-background-color: white;
+    -fx-text-fill: #4e54c8;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 0, 1);
+}
+
+.grid-pane .button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: #ffeb3b;
+}
