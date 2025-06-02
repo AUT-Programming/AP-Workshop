@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.apworkshop12.tictactoe.controllers.GameController"
+            styleClass="root-pane"
+            prefWidth="600" prefHeight="700">
+
+    <!-- Top bar: player name, timer, music toggle -->
+    <top>
+        <HBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Player:" style="-fx-font-size: 18px;"/>
+            <Label fx:id="lblPlayer" style="-fx-font-size: 18px;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label text="Time Left:" style="-fx-font-size: 18px;"/>
+            <Label fx:id="lblTimer" style="-fx-font-size: 18px;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <ToggleButton fx:id="btnMusic"
+                          text="🔊"
+                          onAction="#onToggleMusic"
+                          style="-fx-font-size:20px; -fx-pref-width:50px; -fx-pref-height:50px;"/>
+        </HBox>
+    </top>
+
+    <!-- Center: 3×3 grid of buttons -->
+    <center>
+        <GridPane fx:id="grid" hgap="10" vgap="10">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+            <!-- هر ستون به اندازهٔ مساوی -->
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33"/>
+                <ColumnConstraints percentWidth="33"/>
+                <ColumnConstraints percentWidth="33"/>
+            </columnConstraints>
+            <!-- هر ردیف هم مساوی -->
+            <rowConstraints>
+                <RowConstraints percentHeight="33"/>
+                <RowConstraints percentHeight="33"/>
+                <RowConstraints percentHeight="33"/>
+            </rowConstraints>
+
+            <!-- Row 0 -->
+            <Button fx:id="b00" onAction="#onCellClick"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    text=""
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b01" onAction="#onCellClick"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b02" onAction="#onCellClick"
+                    GridPane.rowIndex="0" GridPane.columnIndex="2"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <!-- Row 1 -->
+            <Button fx:id="b10" onAction="#onCellClick"
+                    GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b11" onAction="#onCellClick"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b12" onAction="#onCellClick"
+                    GridPane.rowIndex="1" GridPane.columnIndex="2"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <!-- Row 2 -->
+            <Button fx:id="b20" onAction="#onCellClick"
+                    GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b21" onAction="#onCellClick"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+            <Button fx:id="b22" onAction="#onCellClick"
+                    GridPane.rowIndex="2" GridPane.columnIndex="2"
+                    style="-fx-pref-width:150px; -fx-pref-height:150px; -fx-font-size:36px;"/>
+        </GridPane>
+    </center>
+
+    <!-- Bottom bar: back to menu -->
+    <bottom>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button text="Back to Menu"
+                    onAction="#onBack"
+                    style="-fx-pref-width:200px; -fx-pref-height:40px; -fx-font-size:16px;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
